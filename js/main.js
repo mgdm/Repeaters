@@ -6,6 +6,8 @@ class ListItem extends React.Component
     render() {
         return <tr>
             <th>{this.props.callsign}</th>
+            <td>{this.props.mode}</td>
+            <td>{this.props.band}</td>
             <td>{this.props.distance ? this.props.distance.toFixed(2) + 'km' : ''}</td>
             <td>{this.props.bearing ? this.props.bearing.toFixed(0) + '°' : ''}</td>
         </tr>;
@@ -17,7 +19,13 @@ class ListView extends React.Component
     render() {
         let items = this.props.repeaters.map(r => <ListItem {...r} />);
         return <table className='u-full-width'>
-            <thead><th>Callsign</th><th>Distance</th><th>Bearing</th></thead>
+            <thead>
+                <th>Callsign</th>
+                <th>Mode</th>
+                <th>Band</th>
+                <th>Distance</th>
+                <th>Bearing</th>
+            </thead>
             <tbody>{items}</tbody>
         </table>;
     }
