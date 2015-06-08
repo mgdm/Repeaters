@@ -13,3 +13,5 @@ npm run build
 
 You can use `npm run watch` to watch the JS files as you edit them.
 
+## Demo
+See [http://mgdm.github.io/Repeaters/](http://mgdm.github.io/Repeaters/).
